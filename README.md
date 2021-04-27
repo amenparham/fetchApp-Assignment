@@ -1,5 +1,5 @@
 # fetchApp-Assignment
-fetchApp assignment For Intern
+Assignment For Intern
 
 ## Language: ```Swift ```
 
