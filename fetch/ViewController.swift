@@ -198,15 +198,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             vc.isLiked = false
         }
         
-        present(vc, animated: true)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
-            searching = false
-            searchThisIndex = true
-            dismissKeyboard()
+        searching = false
+        searchThisIndex = true
+        dismissKeyboard()
+        searchBar.text = ""
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [] in
             tableView.reloadData()
-            searchBar.text = ""
         }
+        
+        present(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
