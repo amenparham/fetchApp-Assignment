@@ -44,7 +44,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.showsVerticalScrollIndicator = false
         self.tableView.separatorStyle = .none
-        loadingIndicator.startAnimating()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -281,6 +280,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             loadingTxt.isHidden = true
             searchBar.isHidden = false
             loadingIndicator.stopAnimating()
+            loadingIndicator.isHidden = true
             
             UIView.animate(withDuration: 0.6) {
                 self.searchBar.alpha = 1.0
@@ -358,4 +358,4 @@ extension ViewController: VC2Delegate {
             tableView.reloadRows(at: [indexPath], with: .automatic)
         }
     }
-}
+} //
