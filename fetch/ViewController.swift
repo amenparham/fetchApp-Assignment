@@ -343,7 +343,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 }
 
-// Conform VC to protocol (VC2Delegate) located in "Structs.swift" File
+// Conform VC to protocol (VC2Delegate) located in "Structs.swift" - File
 extension ViewController: VC2Delegate {
     func likeStatusDidChange(_ vc2: moreInfoViewController, to title: Bool) {
         // set the text of the table cell here...
